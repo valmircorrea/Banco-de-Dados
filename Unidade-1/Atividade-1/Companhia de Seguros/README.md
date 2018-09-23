@@ -22,4 +22,4 @@ diagrama (DER).
 
 • É permitida a criação de entidades derivadas/associativas de forma implícita ou explícita.
 
-![Companhia de Seguros](./CompaniaDeSeguros.png)
+![Companhia de Seguros](./CompanhiaDeSeguros.png)
