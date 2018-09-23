@@ -13,7 +13,7 @@ Projetos    ( codProjeto, tipo, descrição,
    Projetos = {codProjeto, tipo, descrição}
 
    Alocações = {codProjeto, codEmpregado, nome, categoria, salário, dataInício, tempoAlocação}
-   
+
 --------------------------------------------------------------------------------------------
 
 **2º FN:**
