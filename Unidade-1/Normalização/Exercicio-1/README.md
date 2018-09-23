@@ -6,6 +6,8 @@ Projetos    ( codProjeto, tipo, descrição,
              (codEmpregado, nome, categoria, salário),
              (dataInício, tempoAlocação) )
 
+-----------------------------------------------------------------------------------------------
+
 **1º FN:**
 
    Projetos = {codProjeto, tipo, descrição}
