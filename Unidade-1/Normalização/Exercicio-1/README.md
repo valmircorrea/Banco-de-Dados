@@ -6,13 +6,13 @@ Projetos    ( codProjeto, tipo, descrição,
              (codEmpregado, nome, categoria, salário),
              (dataInício, tempoAlocação) )
 
-#1º FN:
+# 1º FN:
 
    Projetos = {codProjeto, tipo, descrição}
 
    Alocações = {codProjeto, codEmpregado, nome, categoria, salário, dataInício, tempoAlocação}
    
-#2º FN:
+# 2º FN:
 
    Projetos = {codProjeto, tipo, descrição}
 
@@ -20,7 +20,7 @@ Projetos    ( codProjeto, tipo, descrição,
 
    Empregado = {codEmpregado, nome, categoria, salário}
 
-#3º FN:
+# 3º FN:
 
    Projetos = {codProjeto, tipo, descrição}
 
