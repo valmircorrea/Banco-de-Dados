@@ -1,4 +1,4 @@
-## Atividade 1: Oficina Mecanica
+## Exercicio 3: Oficina Mecanica
 
 Construa um modelo ER para uma Oficina Mecânica.
 
