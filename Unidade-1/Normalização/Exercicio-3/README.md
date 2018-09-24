@@ -39,10 +39,10 @@ Endereco = {matricula, logradouro, numero, bairro, cidade, estado}
 
 Telefone = {matricula, numeroTelefone}
 
-Funcionario_Cargo = {matricula, idCargo,  dtInicioCargo, dtFimCargo, nomeDependente, dtNascDependente}
+Funcionario_Cargo = {matricula, idCargo,  dtInicioCargo, dtFimCargo, idFuncionario_Dependente}
 
 Cargo = {idCargo, NomeCargo}
 
-Funcionario_Dependente = {matricula, idDependente}
+Funcionario_Dependente = {idFuncionario_Dependente, matricula, idDependente}
 
 Dependente = {idDependente, nomeDependente, dtNascDependente}
