@@ -17,7 +17,9 @@
 
 2 - Buscar os nomes, RGs e datas de nascimento dos médicos, pacientes e funcionários que residem em Parnamirim:
 * (**π**Nome, RG, dataNasc (**σ**cidade = 'Parnamirim'(Medicos))) U
+  
   (**π**Nome, RG, dataNasc (**σ**cidade = 'Parnamirim'(Pacientes))) U
+
   (**π**Nome, RG, dataNasc (**σ**cidade = 'Parnamirim'(Funcionários)))
 
 3 - Buscar os nomes e RGs dos funcionários que recebem salários abaixo de R$ 800,00:
