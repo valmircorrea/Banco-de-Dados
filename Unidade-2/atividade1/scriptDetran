@@ -1,0 +1,57 @@
+﻿CREATE TABLE Pessoa (
+  idPessoa SERIAL NOT NULL,
+  nome VARCHAR(45) NULL,
+  cpf VARCHAR(11) NULL,
+  PRIMARY KEY(idPessoa)
+);
+
+CREATE TABLE Propriedade (
+  idPropriedade SERIAL NOT NULL,
+  Pessoa_idPessoa INTEGER NOT NULL REFERENCES Pessoa,
+  dataAquisicao DATE NULL,
+  situacao VARCHAR(10) NULL,
+  Veiculo_idVeiculo INTEGER NOT NULL,
+  PRIMARY KEY(idPropriedade)
+);
+
+CREATE TABLE Endereco (
+  idEndereco SERIAL NOT NULL,
+  Pessoa_idPessoa INTEGER NOT NULL REFERENCES Pessoa,
+  logradouro VARCHAR(20) NULL,
+  bairro VARCHAR(20) NULL,
+  cep CHAR(8) NULL,
+  numero VARCHAR(5) NULL,
+  complemento VARCHAR(10) NULL,
+  PRIMARY KEY(idEndereco)
+);
+
+CREATE TABLE Infracao (
+  idSinistro SERIAL NOT NULL,
+  Propriedade_idPropriedade INTEGER NOT NULL REFERENCES Propriedade,
+  tipo VARCHAR(20) NULL,
+  dataInfracao DATE NULL,
+  pontos INTEGER NULL,
+  PRIMARY KEY(idSinistro)
+);
+
+CREATE TABLE Telefone (
+  idTelefone SERIAL NOT NULL,
+  Pessoa_idPessoa INTEGER NOT NULL REFERENCES Pessoa,
+  numero VARCHAR(9) NULL,
+  tipoTelefone CHAR(1) NULL,
+  ddd VARCHAR(3) NULL,
+  PRIMARY KEY(idTelefone)
+);
+
+CREATE TABLE Veiculo (
+  idVeiculo SERIAL NOT NULL,
+  placa CHAR(8) NULL,
+  marca VARCHAR(20) NULL,
+  modelo VARCHAR(20) NULL,
+  cor VARCHAR(10) NULL,
+  anoModelo CHAR(4) NULL,
+  anoFabricacao CHAR(4) NULL,
+  tipoCombustivel VARCHAR(10) NULL,
+  potenciaMotor FLOAT NULL,
+  PRIMARY KEY(idVeiculo)
+);

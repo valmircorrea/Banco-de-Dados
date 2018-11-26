@@ -1,0 +1,26 @@
+﻿CREATE TABLE Funcionario (
+  idFuncionario SERIAL NOT NULL UNIQUE,
+  nome VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idFuncionario)
+);
+
+CREATE TABLE Produtos (
+  idProduto SERIAL NOT NULL UNIQUE,
+  descricao VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idProduto)
+);
+
+CREATE TABLE Solicitacao (
+  idSolicitacao SERIAL NOT NULL UNIQUE,
+  idFuncionario INTEGER NOT NULL UNIQUE REFERENCES Funcionario,
+  dataSolicitacao DATE NOT NULL,
+  PRIMARY KEY(idSolicitacao)
+);
+
+CREATE TABLE Itens (
+  idItem SERIAL NOT NULL UNIQUE,
+  idSolicitacao INTEGER NOT NULL UNIQUE REFERENCES Solicitacao,
+  idProduto INTEGER NOT NULL UNIQUE REFERENCES Produtos,
+  quantidade INTEGER NOT NULL,
+  PRIMARY KEY(idItem)
+);

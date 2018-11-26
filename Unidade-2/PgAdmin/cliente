@@ -1,0 +1,8 @@
+﻿CREATE TABLE Cliente (
+  idCliente SERIAL NOT NULL UNIQUE,
+  nome VARCHAR(45) NOT NULL,
+  cpf VARCHAR(14) NOT NULL UNIQUE,
+  genero CHAR NOT NULL CHECK (GENERO = 'M' OR GENERO = 'F'),
+  cidade VARCHAR(15) NULL,
+  PRIMARY KEY(idCliente)
+);

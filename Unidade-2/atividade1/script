@@ -1,0 +1,64 @@
+CREATE TABLE Endereco (
+  idEndereco INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Pessoa_idPessoa INTEGER UNSIGNED NOT NULL,
+  logradouro VARCHAR(20) NULL,
+  bairro VARCHAR(20) NULL,
+  cep CHAR(8) NULL,
+  numero VARCHAR(5) NULL,
+  complemento VARCHAR(10) NULL,
+  PRIMARY KEY(idEndereco),
+  INDEX Endereco_FKIndex1(Pessoa_idPessoa)
+);
+
+CREATE TABLE Infração (
+  idSinistro INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Propriedade_idPropriedade INTEGER UNSIGNED NOT NULL,
+  tipo VARCHAR(20) NULL,
+  dataInfracao DATE NULL,
+  pontos INTEGER UNSIGNED NULL,
+  PRIMARY KEY(idSinistro),
+  INDEX Sinistro_FKIndex1(Propriedade_idPropriedade)
+);
+
+CREATE TABLE Pessoa (
+  idPessoa INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(45) NULL,
+  cpf VARCHAR(11) NULL,
+  PRIMARY KEY(idPessoa)
+);
+
+CREATE TABLE Propriedade (
+  idPropriedade INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Pessoa_idPessoa INTEGER UNSIGNED NOT NULL,
+  dataAquisicao DATE NULL,
+  situacao VARCHAR(10) NULL,
+  Veiculo_idVeiculo INTEGER UNSIGNED NOT NULL,
+  PRIMARY KEY(idPropriedade),
+  INDEX Propriedade_FKIndex2(Veiculo_idVeiculo),
+  INDEX Propriedade_FKIndex2(Pessoa_idPessoa)
+);
+
+CREATE TABLE Telefone (
+  idTelefone INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Pessoa_idPessoa INTEGER UNSIGNED NOT NULL,
+  numero VARCHAR(9) NULL,
+  tipoTelefone CHAR(1) NULL,
+  ddd VARCHAR(3) NULL,
+  PRIMARY KEY(idTelefone),
+  INDEX Telefone_FKIndex1(Pessoa_idPessoa)
+);
+
+CREATE TABLE Veiculo (
+  idVeiculo INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  placa CHAR(8) NULL,
+  marca VARCHAR(20) NULL,
+  modelo VARCHAR(20) NULL,
+  cor VARCHAR(10) NULL,
+  anoModelo CHAR(4) NULL,
+  anoFabricacao CHAR(4) NULL,
+  tipoCombustivel VARCHAR(10) NULL,
+  potenciaMotor FLOAT NULL,
+  PRIMARY KEY(idVeiculo)
+);
+
+

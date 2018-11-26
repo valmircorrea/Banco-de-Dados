@@ -1,0 +1,7 @@
+﻿CREATE TABLE Fornecedor (
+idFornecedor SERIAL NOT NULL UNIQUE,
+nome VARCHAR(45) NOT NULL,
+cidade VARCHAR(20) NULL,
+estado VARCHAR(2) NULL,
+PRIMARY KEY(idFornecedor)
+)
